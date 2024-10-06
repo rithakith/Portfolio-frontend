@@ -7,7 +7,7 @@ const Volunteering = () => {
     {
       id: 1,
       name: "IEEE WIE",
-      image: "../../public/wie.png", // Placeholder image
+      image: "./wie.png", // Placeholder image
     },
     {
       id: 2,

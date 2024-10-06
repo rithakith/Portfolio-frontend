@@ -9,7 +9,7 @@ import {
 import {
   ChatBubbleLeftEllipsisIcon,
 } from "@heroicons/react/24/outline";
-import Config from "../chatbot/config";
+import Config from "../chatbot/Config";
 import MessageParser from "../chatbot/MessageParser";
 import ActionProvider from "../chatbot/ActionProvider";
 import '../../App.css'

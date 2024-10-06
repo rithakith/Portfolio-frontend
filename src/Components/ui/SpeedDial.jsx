@@ -9,9 +9,9 @@ import {
 import {
   ChatBubbleLeftEllipsisIcon,
 } from "@heroicons/react/24/outline";
-import Config from "../Chatbot/config";
-import MessageParser from "../Chatbot/MessageParser";
-import ActionProvider from "../Chatbot/ActionProvider";
+import Config from "../chatbot/config";
+import MessageParser from "../chatbot/MessageParser";
+import ActionProvider from "../chatbot/ActionProvider";
 import '../../App.css'
 
 export function SpeedDialWithTextOutside() {

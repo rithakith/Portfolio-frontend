@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import linkedinImg from "/linkedin.png"
 
 // Assuming your API returns a list of projects
 const Projects = () => {
@@ -69,7 +70,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="text-white hover:text-white transition-colors"
                   >
-                    <img src="../../public/github.png" alt="" width={30} />
+                    <img src="/github.png" alt="" width={30} />
                   </a>
                 )}
                 {project.linkedinLink && (
@@ -79,7 +80,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="text-white hover:text-white transition-colors"
                   >
-                    <img src="../../public/linkedin.png" width={30} />
+                    <img src="/linkedin.png" width={30} />
                   </a>
                 )}
               </div>

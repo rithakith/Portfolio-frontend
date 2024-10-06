@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import wieImg from '/wie.png'; // Import the image for IEEE WIE
 import rotaractImg from '/rotaract.png'; // Import the image for ROTARACT
-import ieeeImg from '/ieee.png'; // Import the image for IEEE
+import ieeeImg from '/assets/ieee.png'; // Import the image for IEEE
 import intecsImg from '/intecs.png'; // Import the image for INTECS
 
 const Volunteering = () => {

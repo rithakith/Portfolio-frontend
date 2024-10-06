@@ -1,0 +1,232 @@
+
+
+body{
+  /* background:#000; */
+  
+}
+.skill-section {
+  opacity: 0; /* Initially hidden */
+  transform: scale(0.8); /* Initial scale for zoom effect */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition for smooth effect */
+}
+
+.skill-section.visible {
+  opacity: 1; /* Fully visible */
+  transform: scale(1); /* Normal scale */
+}
+\/* Bubble styling */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 60px;
+  height: 60px;
+  background: pink;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: float 8s infinite ease-in-out;
+}
+
+.bubble:nth-child(2) {
+  left: 25%;
+  width: 100px;
+  height: 100px;
+  animation-duration: 6s;
+}
+
+.bubble:nth-child(3) {
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  animation-duration: 10s;
+}
+
+.bubble:nth-child(4) {
+  left: 75%;
+  width: 120px;
+  height: 120px;
+  animation-duration: 12s;
+}
+
+.bubble:nth-child(5) {
+  left: 90%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 14s;
+}
+
+/* Floating effect */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-300px) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+
+.competition-card {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.zoom-in {
+  transform: scale(1.1);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.opacity-0 {
+  opacity: 0;
+}
+
+
+@keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slideIn {
+    animation: slideInRight 0.5s ease-out;
+  }
+
+  @keyframes blob-bubble {
+    0%, 100% {
+      transform: translateY(0px) scale(1);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.1);
+    }
+  }
+  
+  .animate-blob-bubble {
+    animation: blob-bubble 8s ease-in-out infinite;
+  }
+  
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+  
+  .animation-delay-1500 {
+    animation-delay: 1.5s;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-2500 {
+    animation-delay: 2.5s;
+  }
+  
+  .animation-delay-3000 {
+    animation-delay: 3s;
+  }
+  
+  .animation-delay-3500 {
+    animation-delay: 3.5s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+
+
+  
+  .animate-name {
+    animation: name-glow 4s ease-in-out infinite;
+  }
+  
+ 
+
+  /* Add this CSS to your styles */
+
+
+.btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+
+/* Add this CSS to your global stylesheet or a CSS module */
+
+/* Add this CSS to your global stylesheet or a CSS module */
+
+/* Add this CSS to your global stylesheet or a CSS module */
+
+/* Perspective for 3D effect */
+.skill-section-container {
+  perspective: 1000px;
+}
+
+/* Base style for skill sections */
+.skill-section {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Animation for skill sections on the left */
+.skill-section.left {
+  transform-origin: left center;
+}
+
+.skill-section.left:hover {
+  transform: rotateY(-10deg) translateZ(10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for skill sections on the right */
+.skill-section.right {
+  transform-origin: left center;
+
+}
+
+.skill-section.right:hover {
+  transform: rotateY(-10deg) translateZ(10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+/* .card.in-view {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: opacity 0.8s ease-out, transform 1s ease-out;
+} */
+
+.card {
+  opacity: 0;
+  transform: scale(0.80);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.card.in-view {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+
+#rkChatbot{
+  .react-chatbot-kit-chat-container {
+    width: 300px ;
+  }
+}
+

@@ -37,7 +37,7 @@ const Volunteering = () => {
 
   return (
     <div
-      className="volunteering-container text-white p-8 min-h-screen flex flex-col items-center"
+      className="volunteering-container text-white p-8  flex flex-col items-center"
       id="passion"
     >
       <h2 className="text-5xl text-center text-pink-500 font-bold mb-24">

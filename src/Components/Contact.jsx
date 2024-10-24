@@ -87,7 +87,7 @@ const Contact = () => {
           </p>
           <div className="flex justify-center space-x-4">
             <a
-              href="https://twitter.com/yourprofile"
+              href="https://github.com/rithakith"
               className="text-pink-500 hover:text-pink-600 transition-colors"
             >
               <img
@@ -107,7 +107,7 @@ const Contact = () => {
               />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:ritharaedirisinghe@gmail.com"
               className="text-pink-500 hover:text-pink-600 transition-colors"
             >
               <img

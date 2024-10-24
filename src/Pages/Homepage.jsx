@@ -18,7 +18,7 @@ const Homepage = () => {
       duration: 1000,
       once: false,
       mirror: true,
-      offset: 200,
+      offset: 1000,
     });
   }, []);
 

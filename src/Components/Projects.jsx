@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import linkedinImg from "/linkedin.png"
+import linkedinImg from "/linkedin.png";
 
-// Assuming your API returns a list of projects
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [visibleProjects, setVisibleProjects] = useState([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -26,29 +26,48 @@ const Projects = () => {
     fetchProjects();
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisibleProjects((prev) => [...prev, entry.target.id]); // Add visible project ID
+          observer.unobserve(entry.target); // Stop observing after it becomes visible
+        }
+      });
+    });
+
+    const projectElements = document.querySelectorAll(".project-card");
+    projectElements.forEach((element) => observer.observe(element));
+
+    return () => {
+      projectElements.forEach((element) => observer.unobserve(element));
+    };
+  }, [projects]);
+
   if (loading) return <p className="text-pink-600 text-center">Loading...</p>;
   if (error) return <p className="text-pink-600 text-center">Error: {error}</p>;
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen " id="projects">
+    <div className="relative flex flex-col items-center justify-center min-h-screen p-4" id="projects">
       <h2 className="text-5xl font-bold text-center text-pink-600 mb-24">
         Projects
       </h2>
 
       {/* Flashy Project Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 px-28 md:px-16 lg:px-40">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 px-4 md:px-8 lg:px-16">
         {projects.map((project, index) => (
           <div
             key={project._id}
-            className="relative group flex flex-col bg-black border border-pink-600 rounded-lg overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-[0_0_10px_1px] hover:scale-105 hover:shadow-pink-500"
+            id={project._id} // Assign an ID for intersection observer
+            className={`project-card relative group flex flex-col bg-black border border-pink-600 rounded-lg overflow-hidden transition-transform transform hover:-translate-y-1 hover:shadow-[0_0_10px_1px] hover:scale-105 hover:shadow-pink-500 ${visibleProjects.includes(project._id) ? 'visible' : 'invisible'}`}
             data-aos="zoom-in" // Add AOS animation
             data-aos-delay={`${index * 100}`} // Staggered delay for animation
           >
             {/* Project Image on Top */}
             {project.image && (
               <img
-              src={`${import.meta.env.VITE_API_URL}/${project.image}`}
-              alt={project.title}
+                src={`${import.meta.env.VITE_API_URL}/${project.image}`}
+                alt={project.title}
                 className="w-full h-48 object-cover group-hover:opacity-90 transition-opacity duration-500"
               />
             )}
@@ -80,7 +99,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="text-white hover:text-white transition-colors"
                   >
-                    <img src="/linkedin.png" width={30} />
+                    <img src={linkedinImg} alt="" width={30} />
                   </a>
                 )}
               </div>

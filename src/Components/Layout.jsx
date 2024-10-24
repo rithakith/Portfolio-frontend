@@ -5,13 +5,13 @@ import Navbar from "./Navbar";
 const Layout = ({ children }) => {
   return (
     <div className="relative min-h-screen flex  flex-col ">
-      <SpeedDialWithTextOutside />
+      {/* <SpeedDialWithTextOutside /> */}
       <Navbar />
-      <div className="-z-10 fixed w-screen h-screen"  style={{
+      <div className="-z-10 fixed w-screen h-screen "  style={{
           backgroundImage: "linear-gradient(black 60%, #B30049 180%)",
         }} ></div>
       <main
-        className="flex-1 "
+        className="flex-1 md:px-8"
        
       >
         {" "}

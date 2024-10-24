@@ -14,45 +14,6 @@ body{
   opacity: 1; /* Fully visible */
   transform: scale(1); /* Normal scale */
 }
-\/* Bubble styling */
-.bubble {
-  position: absolute;
-  bottom: -100px;
-  width: 60px;
-  height: 60px;
-  background: pink;
-  border-radius: 50%;
-  opacity: 0.4;
-  animation: float 8s infinite ease-in-out;
-}
-
-.bubble:nth-child(2) {
-  left: 25%;
-  width: 100px;
-  height: 100px;
-  animation-duration: 6s;
-}
-
-.bubble:nth-child(3) {
-  left: 50%;
-  width: 80px;
-  height: 80px;
-  animation-duration: 10s;
-}
-
-.bubble:nth-child(4) {
-  left: 75%;
-  width: 120px;
-  height: 120px;
-  animation-duration: 12s;
-}
-
-.bubble:nth-child(5) {
-  left: 90%;
-  width: 40px;
-  height: 40px;
-  animation-duration: 14s;
-}
 
 /* Floating effect */
 @keyframes float {
@@ -100,18 +61,6 @@ body{
     animation: slideInRight 0.5s ease-out;
   }
 
-  @keyframes blob-bubble {
-    0%, 100% {
-      transform: translateY(0px) scale(1);
-    }
-    50% {
-      transform: translateY(-20px) scale(1.1);
-    }
-  }
-  
-  .animate-blob-bubble {
-    animation: blob-bubble 8s ease-in-out infinite;
-  }
   
   .animation-delay-1000 {
     animation-delay: 1s;
@@ -167,11 +116,6 @@ body{
 }
 
 
-/* Add this CSS to your global stylesheet or a CSS module */
-
-/* Add this CSS to your global stylesheet or a CSS module */
-
-/* Add this CSS to your global stylesheet or a CSS module */
 
 /* Perspective for 3D effect */
 .skill-section-container {
@@ -205,11 +149,7 @@ body{
 }
 
 
-/* .card.in-view {
-  opacity: 1;
-  transform: scale(1.2);
-  transition: opacity 0.8s ease-out, transform 1s ease-out;
-} */
+
 
 .card {
   opacity: 0;
@@ -230,3 +170,21 @@ body{
   }
 }
 
+
+.competition-card {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+.competition-card.visible {
+  opacity: 1; /* Fully visible when in view */
+}
+
+.visible {
+  opacity: 1; /* Fully visible */
+  transition: opacity 0.2s ease-in;
+}
+
+.invisible {
+  opacity: 0; /* Invisible */
+}

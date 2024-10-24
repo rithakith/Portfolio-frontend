@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <>
       <section className="min-h-screen flex flex-col items-center justify-center py-12" data-aos="fade-up">
-        <div className="max-w-lg w-full p-4 shadow-2xl rounded-xl">
+        <div className="max-w-lg w-full p-6 shadow-2xl rounded-xl">
           <h2 className="text-5xl font-bold text-center text-pink-600 mb-12">
             Contact Me
           </h2>
@@ -97,7 +97,7 @@ const Contact = () => {
               />
             </a>
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/ritharak/"
               className="text-pink-500 hover:text-pink-600 transition-colors"
             >
               <img

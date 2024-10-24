@@ -51,26 +51,27 @@ const Education = () => {
   }, [data]);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center  overflow-hidden" id='education'>
-      <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
-        <h1 className="text-6xl text-center mb-12 text-pink-500 font-bold tracking-wider">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden" id='education'>
+      <div className="w-full max-w-6xl mx-auto px-4 md:px-6 ">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mb-12 text-pink-500 font-bold tracking-wider">
           Education Timeline
         </h1>
-        <div className="flex flex-col justify-center divide-y divide-pink-500 [&>*]:py-16">
+
+        <div className="flex flex-col justify-center divide-y divide-green-900 [&>*]:py-16">
           <div className="w-full max-w-3xl mx-auto">
             {/* Vertical Timeline */}
-            <div className="space-y-16 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-pink-500">
+            <div className=" mx-4 space-y-8 md:space-y-16 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 md:before:bg-blue-500">
               {Array.isArray(data) && data.length > 0 ? (
                 data.map((item, index) => (
                   <div
                     key={item._id}
                     ref={(el) => (cardsRef.current[index] = el)} // Assign ref to each card
-                    className={`card relative flex justify-between md:justify-normal ${
+                    className={`card relative flex flex-col md:flex-row justify-between md:justify-normal ${
                       index % 2 === 0 ? 'md:flex-row-reverse' : ''
                     } group transition-all duration-500 opacity-0 transform scale-95`} // Initial state
                   >
                     {/* Icon */}
-                    <div className="flex items-center w-10 h-10 rounded-full text-white shadow-lg bg-colors-pink-1 transition-all duration-500 border-4 border-black shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative">
+                    <div className="md:flex hidden items-center w-10 h-10 rounded-full text-white shadow-lg bg-orange-600  transition-all duration-500 border-4 border-black shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative">
                       {/* Hide the connecting line for the last card */}
                       {index !== data.length - 1 && (
                         <div className="absolute top-0 h-full w-0.5 bg-colors-pink-1 left-1/2 transform -translate-x-1/2 z-[-1]"></div>
@@ -78,10 +79,10 @@ const Education = () => {
                     </div>
 
                     {/* Card */}
-                    <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-black p-8 rounded-lg border border-pink-500 shadow-lg hover:shadow-2xl transition-all duration-500 transform group mb-5">
+                    <div className="w-full md:w-[calc(50%-2.5rem)] bg-black p-6 md:p-8 rounded-lg border border-pink-500 shadow-lg hover:shadow-2xl transition-all duration-500 transform group mb-5">
                       {/* Institute and Date Section */}
-                      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
-                        <div className="font-extrabold text-2xl text-white group-hover:text-pink-500 transition-colors duration-300">
+                      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 md:mb-6">
+                        <div className="font-extrabold text-xl md:text-2xl text-white group-hover:text-pink-500 transition-colors duration-300">
                           {item.institute}
                         </div>
                         <time className="mt-2 sm:mt-0 text-lg font-semibold text-pink-500 group-hover:text-white transition-colors duration-300">
@@ -90,8 +91,8 @@ const Education = () => {
                       </div>
 
                       {/* Description Section */}
-                      <div className="mt-4">
-                        <p className="text-lg text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
+                      <div className="mt-2 md:mt-4">
+                        <p className="text-base md:text-lg text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
                           {item.description}
                         </p>
                       </div>

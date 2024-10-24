@@ -26,7 +26,7 @@ const Hero = () => {
 
       {/* Responsive Description */}
       <p
-        className="relative z-10 text-colors-lightpink text-lg sm:text-xl md:text-2xl lg:text-3xl mt-4 mx-2 md:mx-32 lg:mx-48 xl:mx-64 text-center"
+        className="relative z-10 text-colors-lightpink text-lg sm:text-xl md:text-2xl  mt-4 mx-2 md:mx-32 lg:mx-48 xl:mx-64 text-center"
         data-aos="fade-up"
         data-aos-delay="50"
       >

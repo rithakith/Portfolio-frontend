@@ -60,7 +60,7 @@ const Education = () => {
         <div className="flex flex-col justify-center divide-y divide-green-900 [&>*]:py-16">
           <div className="w-full max-w-3xl mx-auto">
             {/* Vertical Timeline */}
-            <div className=" mx-4 space-y-8 md:space-y-16 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 md:before:bg-blue-500">
+            <div className=" mx-4 space-y-8 md:space-y-16 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 md:before:bg-colors-pink-1">
               {Array.isArray(data) && data.length > 0 ? (
                 data.map((item, index) => (
                   <div
@@ -71,7 +71,7 @@ const Education = () => {
                     } group transition-all duration-500 opacity-0 transform scale-95`} // Initial state
                   >
                     {/* Icon */}
-                    <div className="md:flex hidden items-center w-10 h-10 rounded-full text-white shadow-lg bg-orange-600  transition-all duration-500 border-4 border-black shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative">
+                    <div className="md:flex hidden items-center w-10 h-10 rounded-full text-white shadow-lg bg-colors-pink-1  transition-all duration-500 border-4 border-black shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 relative">
                       {/* Hide the connecting line for the last card */}
                       {index !== data.length - 1 && (
                         <div className="absolute top-0 h-full w-0.5 bg-colors-pink-1 left-1/2 transform -translate-x-1/2 z-[-1]"></div>

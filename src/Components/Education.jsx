@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from "react";
 
 const Education = () => {
   const [data, setData] = useState([]);
@@ -7,7 +7,9 @@ const Education = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/education`);
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/education`
+        );
         if (response.ok) {
           const result = await response.json();
           setData(result.response);
@@ -27,10 +29,10 @@ const Education = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // Add class when the card is in view
-            entry.target.classList.add('in-view');
+            entry.target.classList.add("in-view");
           } else {
             // Remove class when the card is out of view
-            entry.target.classList.remove('in-view');
+            entry.target.classList.remove("in-view");
           }
         });
       },
@@ -51,11 +53,14 @@ const Education = () => {
   }, [data]);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden" id='education'>
+    <section
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+      id="education"
+    >
       <div className="w-full max-w-6xl mx-auto px-4 md:px-6 ">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mb-12 text-pink-500 font-bold tracking-wider">
-          Education Timeline
-        </h1>
+        <h2 className="text-5xl text-center text-pink-500 font-bold mb-24">
+          Education Timeline{" "}
+        </h2>
 
         <div className="flex flex-col justify-center divide-y divide-green-900 [&>*]:py-16">
           <div className="w-full max-w-3xl mx-auto">
@@ -67,7 +72,7 @@ const Education = () => {
                     key={item._id}
                     ref={(el) => (cardsRef.current[index] = el)} // Assign ref to each card
                     className={`card relative flex flex-col md:flex-row justify-between md:justify-normal ${
-                      index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                      index % 2 === 0 ? "md:flex-row-reverse" : ""
                     } group transition-all duration-500 opacity-0 transform scale-95`} // Initial state
                   >
                     {/* Icon */}

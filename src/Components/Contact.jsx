@@ -13,9 +13,9 @@ const Contact = () => {
     <>
       <section className="min-h-screen flex flex-col items-center justify-center py-12" data-aos="fade-up">
         <div className="max-w-lg w-full p-6 shadow-2xl rounded-xl">
-          <h2 className="text-5xl font-bold text-center text-pink-600 mb-12">
-            Contact Me
-          </h2>
+        <h2 className="text-5xl text-center text-pink-500 font-bold mb-24">
+       Contact Me
+      </h2>
           <form className="flex flex-col space-y-6 mb-8">
             <div className="flex flex-col">
               <label

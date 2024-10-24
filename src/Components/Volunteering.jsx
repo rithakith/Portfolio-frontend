@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import wieImg from '/wie.png'; // Import the image for IEEE WIE
-import rotaractImg from '/rotaract.png'; // Import the image for ROTARACT
-import ieeeImg from '/assets/ieee.png'; // Import the image for IEEE
-import intecsImg from '/intecs.png'; // Import the image for INTECS
+import wieImg from "/wie.png"; // Import the image for IEEE WIE
+import rotaractImg from "/rotaract.png"; // Import the image for ROTARACT
+import ieeeImg from "/assets/ieee.png"; // Import the image for IEEE
+import intecsImg from "/intecs.png"; // Import the image for INTECS
 
 const Volunteering = () => {
   const clubs = [
@@ -36,9 +36,12 @@ const Volunteering = () => {
   }, []);
 
   return (
-    <div className="volunteering-container text-white p-8 min-h-screen flex flex-col items-center" id="passion">
-      <h2 className="text-5xl text-center text-pink-500 font-bold mb-24 mt-24">
-        Volunteering
+    <div
+      className="volunteering-container text-white p-8 min-h-screen flex flex-col items-center"
+      id="passion"
+    >
+      <h2 className="text-5xl text-center text-pink-500 font-bold mb-24">
+        Volunteering{" "}
       </h2>
       <div className="flex flex-wrap justify-center md:gap-8 gap-6 ">
         {clubs.map((club, index) => (

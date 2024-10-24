@@ -59,9 +59,9 @@ const Skills = () => {
   return (
     <section className="min-h-screen flex flex-col py-16 text-white" id="skills">
       <div className="w-full max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl text-center text-pink-500 font-bold mb-12">
-          My Skills
-        </h2>
+      <h2 className="text-5xl text-center text-pink-500 font-bold mb-24">
+       My Skills
+      </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {/* Frontend Skills */}

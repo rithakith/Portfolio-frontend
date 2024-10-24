@@ -49,8 +49,8 @@ const Projects = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen p-4 mt-4" id="projects">
-      <h2 className="text-5xl font-bold text-center text-pink-600 mb-24">
-        Projects
+    <h2 className="text-5xl text-center text-pink-500 font-bold mb-24">
+Projects
       </h2>
 
       {/* Flashy Project Grid */}

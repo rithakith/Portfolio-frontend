@@ -71,7 +71,7 @@ const Hero = () => {
         </a>
 
         {/* Contact Me Button */}
-        <button
+        <a href="#contact">  <button 
           data-aos="fade-up"
           data-aos-duration="500"
           className="relative p-3 sm:p-5 px-8 sm:px-12 text-colors-pink-1 border-colors-pink-1 border-2 font-bold rounded-full overflow-hidden btn bg-gradient-to-r from-gray-900 to-black hover:from-black hover:to-gray-900 hover:scale-105 transform transition-transform duration-300 ease-out shadow-lg"
@@ -93,7 +93,8 @@ const Hero = () => {
             ></rect>
           </svg>
           Contact Me
-        </button>
+        </button></a>
+      
       </div>
     </div>
   );

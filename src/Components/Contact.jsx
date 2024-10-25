@@ -11,7 +11,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="min-h-screen flex flex-col items-center justify-center py-12" data-aos="fade-up">
+      <section className="min-h-screen flex flex-col items-center justify-center py-12" data-aos="fade-up" id="contact">
         <div className="max-w-lg w-full p-6 shadow-2xl rounded-xl">
         <h2 className="text-5xl text-center text-pink-500 font-bold mb-24">
        Contact Me
